@@ -21,9 +21,10 @@ class Index extends Component {
     render() {
         return (
             <Container>
+                <h1>Deputados</h1>
                 {this.state.deps.map(dep => (
-                    <Card>
-                        <Card.Body  key={dep.id} onClick={() => this.handleClick(dep.id)}>
+                    <Card key={dep.id} onClick={() => this.handleClick(dep.id)}>
+                        <Card.Body >
                                 {/* <img src={article.urlToImage} /> */}
                                 <h1>{dep.nome}</h1>
                                 <h1>{dep.id}</h1>
@@ -31,7 +32,7 @@ class Index extends Component {
                                 <a href={article.url} target="_blank">Link</a> */}
                         </Card.Body>
                     </Card>
-                ))}
+                ))} 
 
             </Container>
            
